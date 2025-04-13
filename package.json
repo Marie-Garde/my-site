@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "type": "module",
-  "homepage": "https://Marie-Garde.github.io/my-site",
+  "homepage": "https://www.marie-garde.com",
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check \"build-only {@}\" --",

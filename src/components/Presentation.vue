@@ -3,6 +3,9 @@ import { ref, onMounted, onBeforeUnmount } from 'vue';
 import me from '@/assets/illustration/me.png';
 import backgroundImage from '@/assets/illustration/background-top.jpg';
 import owls from '@/assets/illustration/chouettes-colorées-blanc.png';
+import { isMobile } from '@/reactives/isMobile';
+
+const mobile = isMobile();
 
 const words = [
   'Marie !',
@@ -51,7 +54,7 @@ onBeforeUnmount(() => {
     </div>
   </div>
 
-  <img class="owls" :src="owls" />
+  <img v-if="!mobile" class="owls" :src="owls" />
 </template>
 
 <style lang="scss" scoped>
@@ -162,18 +165,10 @@ onBeforeUnmount(() => {
 
 .owls {
   position: absolute;
-  bottom: -11%;
+  bottom: -13%;
   left: 25%;
   transform: translateX(-50%);
   z-index: 1;
   width: 700px;
-  @media (min-width: 768px) and (max-width: 1280px) {
-    width: 50%;
-  }
-  @media (max-width: 768px) {
-    width: 60%;
-    bottom: -6%;
-    left: 35%;
-  }
 }
 </style>
