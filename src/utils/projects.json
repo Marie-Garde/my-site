@@ -1,0 +1,67 @@
+{
+  "projects": [
+    {
+      "title": "Mon Espace Santè",
+      "description": "Ce projet vise à fournir une solution complète de gestion médicale aux utilisateurs, par le biais d’un lien plus fort avec les professionnnels de santé, un suivi de leurs informations et documents, ainsi que de la possibilité de gérer les profils de leurs enfants.",
+      "location": "Accenture",
+      "skills": [
+        "VueJs",
+        "NestJs",
+        "GraphQL",
+        "Gestion de projet",
+        "Management d'équipe",
+        "Jira",
+        "Scrum"
+      ],
+      "link": "https://www.monespacesante.fr/"
+    },
+    {
+      "title": "Site de gestion des repas",
+      "description": "Développement d’un site de gestion des repas, en fonction des données de chaque aliment (calories, protéïnes, lipides, glucides, principaux minéraux).",
+      "location": "Projet personnel",
+      "skills": ["NextJs", "Prisma", "PostgreSQL"]
+    },
+    {
+      "title": "InforM3",
+      "description": "InforM3 est un logiciel permettant une gestion de base des stocks et de la gestions d’usines pour des clients internationaux.",
+      "location": "IBM",
+      "skills": ["InforM3", "Angular", "NestJs", "Jira", "Scrum"]
+    },
+    {
+      "title": "CEVA",
+      "description": "Reprise d’une librairie de composant réalisée en angular sans librairie ou package externe. Baser un storybook en angular sur cette librairie afin de présenter au client des composants indépendants et prêts à l’emploi.",
+      "location": "IBM",
+      "skills": ["Angular", "Storybook", "Jira", "Scrum"]
+    },
+    {
+      "title": "APERAM",
+      "description": "Reprise d’un chatbot réalisé pour la gestion RH de l’entreprise 2 ans auparavant, le chatbot n’envoyait plus les mails.",
+      "location": "IBM",
+      "skills": ["Angular", "Jira"]
+    },
+    {
+      "title": "Site de fleuristerie",
+      "description": "Développement d’un site vitrine d'une fleuristerie avec espace administrateur",
+      "location": "Projet personnel",
+      "skills": ["Angular", "NodeJs", "Prisma", "PostgreSQL"]
+    },
+    {
+      "title": "E-ON",
+      "description": "Site dédié à la gestion des portefeuilles client d’une entreprise de gaz et électricité. Refonte complète du site sur de nouveaux critères de facilitation pour les employés.",
+      "location": "IBM",
+      "skills": ["Angular", "Angular material", "Jira", "Scrum"]
+    },
+    {
+      "title": "Stellantis",
+      "description": "Ce projet a pour objectif de gérer les solutions des objets connectés dans les voitures. Le cloud AWS est utilisé pour tous les déploiements et les tests des solutions. Il y a également des interactions avec Salesforce, Drupal et Zuora.",
+      "location": "IBM",
+      "skills": ["NodeJs", "AWS", "Jira", "Scrum"]
+    },
+    {
+      "title": "Sixense",
+      "description": "Mettre en place une application de liaison dans les chantiers nucléaires avec une partie desktop servant au suivi depuis les bureaux et une partie mobile pour la communication depuis le terrain.",
+      "location": "IBM",
+      "skills": ["Angular", "NestJs", "pgAdmin", "postreSQL", "Jira", "Scrum"]
+    }
+  ]
+}

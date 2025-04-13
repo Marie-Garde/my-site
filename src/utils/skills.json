@@ -1,0 +1,27 @@
+[
+  [
+    "VueJs",
+    "Angular",
+    "TypeScript",
+    "HTML/CSS",
+    "SASS",
+    "Pinia",
+    "Bibliothèques CSS (Boostrap, Tailwind)"
+  ],
+  ["NodeJs", "NestJs", "GraphQL", "PostgreSQL", "EspressJs", "mySQL", "MongoDB"],
+  [
+    "Qualité de code",
+    "Tests unitaires",
+    "Tests d'intégration",
+    "Test Driven Development (TDD)",
+    "Refactoring"
+  ],
+  ["Maquettage web", "Figma", "Expérience utilisateur (UI/UX)", "Design System", "Storybook"],
+  [
+    "Référencement naturel (SEO)",
+    "Référencement payant (SEA)",
+    "Accessibilité",
+    "Tracking",
+    "Analyse de trafic"
+  ]
+]
