@@ -176,10 +176,6 @@ function scrollToTop() {
     .burger-menu {
       display: block;
     }
-
-    ul {
-      // display: none;
-    }
   }
 }
 </style>
