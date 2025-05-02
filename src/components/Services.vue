@@ -77,12 +77,14 @@ import Title from './Title.vue';
 .container {
   display: flex;
   justify-content: center;
-  padding-bottom: 60px;
+  padding-bottom: 90px;
+  margin-top: 30px;
+  width: 100%;
 
   .content {
-    width: 70%;
-    @media (max-width: 1280px) {
-      width: 90%;
+    max-width: 1300px;
+    @media (max-width: 1024px) {
+      margin: 0 20px;
     }
   }
 }

@@ -10,7 +10,7 @@ import cross from '@/assets/illustration/cross.vue';
 const mobile = isMobile();
 
 const isScrolled = ref(false);
-const menuOpen = ref(false); // État pour l'ouverture du menu burger
+const menuOpen = ref(false);
 const router = useRouter();
 const route = useRoute();
 

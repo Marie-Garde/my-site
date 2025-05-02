@@ -304,9 +304,9 @@ function sendEmail() {
   padding-bottom: 60px;
 
   .content {
-    width: 70%;
-    @media (max-width: 768px) {
-      width: 90%;
+    max-width: 1300px;
+    @media (max-width: 1024px) {
+      margin: 0 20px;
     }
   }
 }

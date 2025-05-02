@@ -11,11 +11,13 @@ const router = createRouter({
       path: RoutesPath.HOME,
       name: RoutesName.HOME,
       component: Home,
+      meta: { title: 'Marie Garde - Accueil' },
     },
     {
       path: RoutesPath.LEGAL,
       name: RoutesName.LEGAL,
       component: Legal,
+      meta: { title: 'Marie Garde - Mentions légales' },
     },
   ],
 });

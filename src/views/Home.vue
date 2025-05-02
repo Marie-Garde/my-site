@@ -5,6 +5,7 @@ import Faq from '@/components/faq.vue';
 import Presentation from '@/components/Presentation.vue';
 import Projects from '@/components/Projects.vue';
 import Services from '@/components/Services.vue';
+import Skills from '@/components/Skills.vue';
 import Steps from '@/components/Steps.vue';
 </script>
 

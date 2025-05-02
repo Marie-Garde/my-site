@@ -8,6 +8,10 @@ const visibleProjects = ref(3);
 const showMore = () => {
   visibleProjects.value += 3;
 };
+
+const showLess = () => {
+  visibleProjects.value -= 3;
+};
 </script>
 
 <template>
@@ -35,13 +39,20 @@ const showMore = () => {
         </li>
       </ul>
 
-      <button
-        v-if="visibleProjects < projects.projects.length"
-        @click="showMore"
-        class="show-more-button"
-      >
-        Voir plus
-      </button>
+      <hr class="separator" />
+
+      <div class="buttons">
+        <button
+          v-if="visibleProjects < projects.projects.length"
+          @click="showMore"
+          class="buttons-show-more"
+        >
+          Voir plus
+        </button>
+        <button v-if="visibleProjects > 3" @click="showLess" class="buttons-show-less">
+          Voir moins
+        </button>
+      </div>
     </div>
   </div>
 </template>
@@ -53,9 +64,13 @@ const showMore = () => {
   width: 100%;
   display: flex;
   justify-content: center;
+  margin-top: 60px;
 
   .content {
-    width: 70%;
+    max-width: 1200px;
+    @media (max-width: 1024px) {
+      margin: 0 20px;
+    }
     @media (max-width: 768px) {
       width: 90%;
     }
@@ -120,21 +135,45 @@ const showMore = () => {
   }
 }
 
-.show-more-button {
-  background-color: $orange;
-  color: $white;
-  padding: 10px 20px;
-  margin-top: 20px;
+.separator {
   border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  @media (max-width: 768px) {
-    width: 100%;
-  }
+  height: 1px;
+  background-color: $white;
+  width: 100%;
+  margin: 40px 0;
+}
 
-  &:hover {
+.buttons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  &-show-more {
+    background-color: $orange;
     color: $white;
+    padding: 20px 30px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 20px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s;
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+  }
+  &-show-less {
+    background-color: transparent;
+    color: $white;
+    padding: 20px 30px;
+    border: $white 2px solid;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s;
+    @media (max-width: 768px) {
+      width: 100%;
+    }
   }
 }
 

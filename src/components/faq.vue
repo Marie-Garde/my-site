@@ -107,14 +107,16 @@ import Title from './Title.vue';
 @use '@/assets/variables.scss' as *;
 .container {
   background-color: $grey-soft;
+  width: 100%;
+  padding-bottom: 60px;
   display: flex;
   justify-content: center;
-  padding-bottom: 60px;
 
   .content {
-    width: 60%;
-    @media (max-width: 768px) {
-      width: 90%;
+    min-width: 70%;
+    max-width: 1300px;
+    @media (max-width: 1024px) {
+      min-width: 90%;
     }
 
     .text-top {

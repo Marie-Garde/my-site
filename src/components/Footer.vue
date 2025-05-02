@@ -4,7 +4,7 @@ import { RoutesName } from '@/routes/routeName';
 
 <template>
   <div class="footer">
-    <div class="first-line">
+    <div class="left">
       <p>2025 - © Marie Garde | Tous droits réservés |</p>
       <RouterLink class="router-link" :to="{ name: RoutesName.LEGAL }"
         >Informations légales</RouterLink
@@ -20,18 +20,17 @@ import { RoutesName } from '@/routes/routeName';
 .footer {
   width: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  .first-line {
+  padding: 10px 0;
+  .left {
     display: flex;
     p {
-      margin: 0;
-      padding-right: 3px;
+      margin: 0 5px 0 10px;
     }
   }
   p {
-    margin: 0;
+    margin: 0 10px;
   }
   .router-link {
     cursor: pointer;

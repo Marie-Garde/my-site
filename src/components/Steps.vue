@@ -1,6 +1,12 @@
 <script setup lang="ts">
 import Title from './Title.vue';
 import codingImag from '@/assets/illustration/coding.jpg';
+import deploy from '@/assets/icon/deploy.png';
+import design from '@/assets/icon/design.png';
+import dev from '@/assets/icon/dev.png';
+import meeting from '@/assets/icon/meeting.png';
+import training from '@/assets/icon/training.png';
+import maintenance from '@/assets/icon/maintenance.png';
 </script>
 
 <template>
@@ -10,60 +16,67 @@ import codingImag from '@/assets/illustration/coding.jpg';
       <Title title="Dèroulement de votre projet" id="steps" color="white" />
       <p class="subTitle">Il ne vous reste que 5 étapes pour lancer votre solution numérique.</p>
       <div class="cards-container">
-        <div class="card">
-          <div class="card-content">
-            <h3 class="title">Èchange sur vos besoins</h3>
-            <p>
-              L'étape la plus cruciale, vous allez m'expliquer vos besoins et attentes, que je
-              convertirai en un document que nous allons utiliser tout au long de notre partenariat
-              : la note de cadrage.
-            </p>
+        <div class="first-line">
+          <div class="card">
+            <div class="card-content">
+              <img class="icon" :src="meeting" />
+              <h3 class="title">Èchange</h3>
+              <p>
+                Vous allez m'expliquer vos besoins et attentes, et nous allons construire ensemble
+                la note de cadrage du projet !
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-content">
+              <img class="icon" :src="design" />
+              <h3 class="title">Maquettes</h3>
+              <p>
+                Une solution numérique se doit d'être différenciant et optimisé. Votre projet mérite
+                une solution personnalisée !
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-content">
+              <img class="icon" :src="dev" />
+              <h3 class="title">Construction</h3>
+              <p>Ce sera à mon tour de construire la solution parfaite pour vos besoins !</p>
+            </div>
           </div>
         </div>
-        <div class="card">
-          <div class="card-content">
-            <h3 class="title">Crèation de maquettes</h3>
-            <p>
-              Une solution numérique, surtout s'il s'agit d'un site web, se doit d'être
-              différenciant et optimisé. Votre projet mérite une solution personnalisée !
-            </p>
-            <p>
-              Nous verrons également ici l'UI/UI de la solution, afin de fournir à l'utilisateur
-              l'expérience la plce agréable possible.
-            </p>
+        <div class="second-line">
+          <div class="card">
+            <div class="card-content">
+              <img class="icon" :src="deploy" />
+              <h3 class="title">Livraison</h3>
+              <p>
+                Déploiement de votre solution pour qu'elle soit accessible et que vous puissiez
+                prendre votre Envol Digital !
+              </p>
+            </div>
           </div>
-        </div>
-        <div class="card">
-          <div class="card-content">
-            <h3 class="title">Construction de la solution</h3>
-            <p>
-              Une fois les maquettes réalisées, ce sera à mon tour de construire la solution
-              parfaite pour vos besoins ! En restant régulièrement en contacct avec vous pour
-              vérifier que tout va dans la bonne direction.
-            </p>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-content">
-            <h3 class="title">Livraison</h3>
-            <p>
-              Une fois la solution validée, je la déploierai pour qu'elle soit accessible et que
-              vous puissiez prendre votre envol digital !
-            </p>
-          </div>
-        </div>
 
-        <div class="card">
-          <div class="card-content">
-            <h3 class="title">Formation et maintenance</h3>
-            <p>
-              Si besoin, je peux vous former sur des outils pour vous rendre plus indépendants dans
-              la gestion de votre contenu.
-            </p>
-            <p>
-              Également, un site web doit être maintenu pour éviter qu'il soit déprécié et les
-              failles de sécurité. Je peux vous aider à vous maintenir à la page.
-            </p>
+          <div class="card">
+            <div class="card-content">
+              <img class="icon" :src="training" />
+              <h3 class="title">Formation</h3>
+              <p>
+                Je peux vous former sur des outils pour vous rendre plus indépendants dans la
+                gestion de votre contenu.
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-content">
+              <img class="icon" :src="maintenance" />
+              <h3 class="title">Maintenance</h3>
+              <p>
+                Un site web doit être maintenu pour éviter qu'il soit déprécié et les failles de
+                sécurité.
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -101,7 +114,7 @@ import codingImag from '@/assets/illustration/coding.jpg';
     z-index: 1;
 
     .subTitle {
-      padding: 0 0 40px 0;
+      padding: 0 0 60px 0;
       margin: 0;
       @media (max-width: 768px) {
         text-align: center;
@@ -110,24 +123,46 @@ import codingImag from '@/assets/illustration/coding.jpg';
 
     .cards-container {
       display: flex;
-      justify-content: space-around;
-      width: 100%;
+      flex-direction: column;
+      max-width: 1200px;
       padding-bottom: 50px;
       @media (max-width: 768px) {
         flex-direction: column;
         align-items: center;
         gap: 20px;
       }
+
+      .first-line {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 20px;
+      }
+
+      .second-line {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+      }
+
       .card {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        width: 15%;
-        background: rgba(246, 246, 246, 0.2);
+        width: 30%;
+        background: rgba(246, 246, 246, 0.4);
         border-radius: 8px;
         text-align: center;
         &-content {
           margin: 0 10px;
+          padding: 10px;
+          .icon {
+            width: 70px;
+            height: 70px;
+          }
+          .title {
+            margin: 10px 0;
+          }
         }
         @media (max-width: 768px) {
           width: 90%;

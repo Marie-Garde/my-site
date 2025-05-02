@@ -2,56 +2,64 @@
 import programmer from '@/assets/illustration//programmer.jpg';
 import work from '@/assets/illustration/work.jpg';
 import Title from './Title.vue';
+import gitHubIcon from '@/assets/icon/github.png';
+import linkedinIcon from '@/assets/icon/linkedin.png';
+import maltIcon from '@/assets/icon/malt.png';
 </script>
 
 <template>
   <div class="container">
-    <div class="content">
-      <Title title="Á propos" id="about" color="white" />
+    <Title title="Á propos" id="about" color="white" />
 
-      <div class="about-me">
-        <img :src="programmer" class="about-me-image" />
-        <div class="about-me-text">
-          <h3>Moi en quelques mots</h3>
-          <p>
-            Après des études et une première partie de vie professionnelle en tant qu'ingénieure
-            agronome, j'ai décidé de me réorienter vers ma passion initiale : le digital. 4 ans
-            d'expérience dans le développement web plus tard, j'ai quitté le salariat pour le
-            freelance afin de toucher à plus de projets différents et travailler avec des personnes
-            de tous horizons. Passionnée et à l'écoute, comprendre vos activités et trouver le
-            meilleur moyen de vous aider est ce qui me motive au quotidien. Très adaptable, je peux
-            m'intégrer à une équipe déjà existante comme suivre le projet en solo.
-          </p>
-          <p>
-            Pour ce qui est du côté personnel de la force, je pratique l'escalade depuis plusieurs
-            années et prépare actuellement un Hyrox. Je dévore livres et ghibli par dizaines. J'aime
-            évoluer et me donner des défis en permanence.
-          </p>
-          <div class="links">
-            <p>Retrouvez moi sur :</p>
-            <div class="buttons">
-              <a
-                href="https://www.malt.fr/profile/mariegarde"
-                target="_blank"
-                rel="noopener noreferrer"
-                ><p>Malt</p></a
-              >
-              <a
-                href="https://www.linkedin.com/in/marie-garde"
-                target="_blank"
-                rel="noopener noreferrer"
-                ><p>Linkedin</p></a
-              >
-              <a href="https://github.com/Marie-Garde" target="_blank" rel="noopener noreferrer"
-                ><p>GitHub</p></a
-              >
-            </div>
+    <div class="about-me">
+      <img :src="programmer" class="about-me-image" />
+      <div class="about-me-text">
+        <h3>Moi en quelques mots</h3>
+        <p>
+          Après des études et une première partie de vie professionnelle en tant qu'ingénieure
+          agronome, j'ai décidé de me réorienter vers ma passion initiale : le digital. 4 ans
+          d'expérience dans le développement web plus tard, j'ai quitté le salariat pour le
+          freelance afin de toucher à plus de projets différents et travailler avec des personnes de
+          tous horizons. Passionnée et à l'écoute, comprendre vos activités et trouver le meilleur
+          moyen de vous aider est ce qui me motive au quotidien. Très adaptable, je peux m'intégrer
+          à une équipe déjà existante comme suivre le projet en solo.
+        </p>
+        <p>
+          Pour ce qui est du côté personnel de la force, je pratique l'escalade depuis plusieurs
+          années et prépare actuellement un Hyrox. Je dévore livres et ghibli par dizaines. J'aime
+          évoluer et me donner des défis en permanence.
+        </p>
+        <div class="links">
+          <p>Retrouvez moi sur :</p>
+          <div class="buttons">
+            <a
+              href="https://www.malt.fr/profile/mariegarde"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img :src="maltIcon" />
+              <p>Malt</p>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/marie-garde"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img :src="linkedinIcon" />
+              <p>Linkedin</p>
+            </a>
+            <a href="https://github.com/Marie-Garde" target="_blank" rel="noopener noreferrer">
+              <img :src="gitHubIcon" />
+              <p>GitHub</p>
+            </a>
           </div>
         </div>
       </div>
+    </div>
 
-      <div class="about-freelance">
-        <div class="about-freelance-text">
+    <div class="about-freelance">
+      <div class="about-freelance-content">
+        <div class="about-freelance-content-text">
           <h3>Qu'est ce qu'une solution numèrique ?</h3>
           <p>
             C’est exactement ce que je propose. Aujourd’hui, le digital est partout, et démarrer ou
@@ -75,7 +83,7 @@ import Title from './Title.vue';
             clarté, plus d’impact.
           </p>
         </div>
-        <img class="about-freelance-image" :src="work" />
+        <img class="about-freelance-content-image" :src="work" />
       </div>
     </div>
   </div>
@@ -88,21 +96,18 @@ import Title from './Title.vue';
   width: 100%;
   display: flex;
   justify-content: center;
-
-  .content {
-    width: 70%;
-    @media (max-width: 1280px) {
-      width: 90%;
-    }
-  }
+  flex-direction: column;
+  align-items: center;
 }
 
 .about-me {
   display: flex;
-  width: 100%;
-  justify-content: space-between;
+  max-width: 1200px;
+  justify-content: center;
   align-items: center;
-  text-align: end;
+  @media (max-width: 1024px) {
+    margin: 0 20px;
+  }
   @media (max-width: 768px) {
     flex-direction: column-reverse;
   }
@@ -119,9 +124,9 @@ import Title from './Title.vue';
     width: 60%;
     display: flex;
     flex-direction: column;
-    align-items: end;
+    margin-left: 30px;
     @media (max-width: 768px) {
-      width: 100%;
+      width: 90%;
       text-align: center;
       align-items: center;
       h3 {
@@ -147,14 +152,24 @@ import Title from './Title.vue';
       a {
         width: 100px;
         border-radius: 5px;
-        background-color: $green;
+        background-color: $white;
         border: 0;
-        text-align: center;
         color: inherit;
         text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         transition:
           background-color 0.3s ease,
           transform 0.2s ease;
+        img {
+          width: 20px;
+          height: 20px;
+          margin-right: 10px;
+        }
+        p {
+          color: $black;
+        }
       }
       a:hover {
         background-color: $orange;
@@ -164,31 +179,44 @@ import Title from './Title.vue';
 }
 
 .about-freelance {
-  display: flex;
   margin-top: 40px;
-  @media (max-width: 768px) {
-    flex-direction: column;
-    margin-top: 20px;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-  }
-  &-image {
-    width: 40%;
-    border-radius: 5px;
-    box-shadow: 0px 5px 5px #25262b;
-    @media (max-width: 768px) {
-      width: 90%;
+  background-color: $black-dark;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 60px 0;
+
+  &-content {
+    display: flex;
+    max-width: 1200px;
+    @media (max-width: 1024px) {
+      padding: 0 20px;
     }
-  }
-  &-text {
-    margin-left: 30px;
+
     @media (max-width: 768px) {
-      margin: 0;
+      flex-direction: column;
+      margin-top: 20px;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
     }
-    ul {
-      list-style-position: inside;
-      padding: 0;
+    &-image {
+      width: 40%;
+      border-radius: 5px;
+      box-shadow: 0px 5px 5px #25262b;
+      @media (max-width: 768px) {
+        width: 90%;
+      }
+    }
+    &-text {
+      margin-right: 30px;
+      @media (max-width: 768px) {
+        margin: 0;
+      }
+      ul {
+        list-style-position: inside;
+        padding: 0;
+      }
     }
   }
 }

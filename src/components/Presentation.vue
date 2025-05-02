@@ -11,7 +11,6 @@ const words = [
   'Marie !',
   'crèative !',
   'passionnèe !',
-  'ta mére ?',
   'engagèe !',
   "façonneuse d'idèes !",
   'enthousiaste !',
