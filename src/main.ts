@@ -11,7 +11,7 @@ app.use(router);
 
 router.beforeEach((to, from, next) => {
   const defaultTitle = 'Marie Garde';
-  document.title = to.meta.title || defaultTitle;
+  document.title = (to.meta.title as string) || defaultTitle;
   next();
 });
 
