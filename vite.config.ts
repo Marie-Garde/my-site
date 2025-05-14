@@ -13,4 +13,9 @@ export default defineConfig({
     },
   },
   base: '/',
+  server: {
+    fs: {
+      strict: true,
+    },
+  },
 });
