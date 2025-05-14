@@ -12,7 +12,7 @@ import maltIcon from '@/assets/icon/malt.png';
     <Title title="Á propos" id="about" color="white" />
 
     <div class="about-me">
-      <img :src="programmer" class="about-me-image" />
+      <img :src="programmer" class="about-me-image" alt="programmer" />
       <div class="about-me-text">
         <h3>Moi en quelques mots</h3>
         <p>
@@ -83,7 +83,7 @@ import maltIcon from '@/assets/icon/malt.png';
             clarté, plus d’impact.
           </p>
         </div>
-        <img class="about-freelance-content-image" :src="work" />
+        <img class="about-freelance-content-image" :src="work" alt="work-laptop" />
       </div>
     </div>
   </div>

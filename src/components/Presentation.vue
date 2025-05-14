@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, onMounted, onBeforeUnmount } from 'vue';
-import me from '@/assets/illustration/me.png';
-import backgroundImage from '@/assets/illustration/background-top.jpg';
+import backgroundImage from '@/assets/illustration/background-presentation.png';
+import backgroundMobileImage from '@/assets/illustration/background-presentation-mobile.png';
 import owls from '@/assets/illustration/chouettes-colorées-blanc.png';
 import { isMobile } from '@/reactives/isMobile';
 
@@ -34,30 +34,37 @@ onBeforeUnmount(() => {
 
 <template>
   <div class="container">
-    <img class="background-image" :src="backgroundImage" />
-    <div class="content">
-      <div class="text">
+    <img v-if="!mobile" class="background-image" :src="backgroundImage" alt="presentation" />
+    <img v-else class="background-image" :src="backgroundMobileImage" alt="presentation" />
+
+    <div class="text">
+      <div v-if="!mobile">
+        <h1>Bonjour,</h1>
+        <h1>
+          je suis <span class="currentWord">{{ currentWord }}</span>
+        </h1>
+      </div>
+      <div v-else>
         <h1>Bonjour, je suis</h1>
         <h1 class="currentWord">{{ currentWord }}</h1>
-        <p>
-          Je vous aide à développer votre présence en ligne par la co-création d'outils numériques
-          personnalisés !
-        </p>
-        <div class="contact">
-          <p>Vous avez un projet ?</p>
-          <a href="#contact" v-smooth-scroll>Contactez-moi !</a>
-        </div>
       </div>
-
-      <img class="me" :src="me" />
+      <p>
+        Je vous aide à développer votre présence en ligne par la co-création d'outils numériques
+        personnalisés !
+      </p>
+      <div class="contact">
+        <p>Vous avez un projet ?</p>
+        <a href="#contact" v-smooth-scroll>Contactez-moi !</a>
+      </div>
     </div>
   </div>
 
-  <img v-if="!mobile" class="owls" :src="owls" />
+  <img v-if="!mobile" class="owls" :src="owls" alt="chouettes" />
 </template>
 
 <style lang="scss" scoped>
 @use '@/assets/variables.scss' as *;
+@use '@/assets/breakpoints' as *;
 
 .container {
   position: relative;
@@ -76,98 +83,102 @@ onBeforeUnmount(() => {
     z-index: 0;
   }
 
-  .content {
+  .text {
     position: relative;
     display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    height: 100%;
+    justify-content: center;
+    flex-direction: column;
+    height: 90%;
+    max-width: 50%;
     padding: 0 3vw;
+    margin-left: 5vw;
     z-index: 1;
-    @media (max-width: 768px) {
-      flex-direction: column;
-      padding: 0;
-      width: 100%;
-      align-items: center;
+
+    @include max-size(s) {
+      margin: 0 auto;
+      max-width: 90%;
       text-align: center;
-      height: 90%;
-      margin-top: 10vh;
+      justify-content: start;
+      padding-top: 40%;
     }
 
-    .text {
-      margin-left: 5vw;
-      padding: 0;
-      height: 100%;
-      max-width: 60%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      @media (max-width: 768px) {
-        margin-left: 0;
-        max-width: 90%;
+    h1 {
+      margin: 0;
+      font-size: 4rem;
+
+      @include between(s, l) {
+        font-size: 3.5rem;
       }
-      h1 {
-        margin: 0;
-        font-size: 4rem;
-        @media (min-width: 768px) and (max-width: 1280px) {
-          font-size: 3.5rem;
-        }
-        @media (max-width: 768px) {
-          font-size: 2.5rem;
-        }
+
+      @include max-size(s) {
+        font-size: 2.5rem;
       }
+
       .currentWord {
         color: $orange;
       }
-      p {
-        font-size: 2rem;
-        margin: 0;
+    }
 
-        @media (min-width: 768px) and (max-width: 1280px) {
+    p {
+      font-size: 2rem;
+      margin: 0;
+
+      @include between(s, l) {
+        font-size: 1.4rem;
+      }
+
+      @include max-size(s) {
+        font-size: 1.3rem;
+      }
+    }
+
+    .contact {
+      display: flex;
+
+      @include max-size(s) {
+        padding-top: 10px;
+        flex-direction: column;
+      }
+
+      a {
+        font-size: 2rem;
+        margin-left: 5px;
+        color: $green;
+
+        @include between(s, l) {
           font-size: 1.4rem;
         }
-        @media (max-width: 768px) {
+
+        @include max-size(s) {
           font-size: 1.3rem;
         }
       }
-      .contact {
-        display: flex;
-        @media (max-width: 768px) {
-          padding-top: 10px;
-          flex-direction: column;
-        }
-        a {
-          font-size: 2rem;
-          margin-left: 5px;
-          color: $green;
-          @media (min-width: 768px) and (max-width: 1280px) {
-            font-size: 1.4rem;
-          }
-          @media (max-width: 768px) {
-            font-size: 1.3rem;
-          }
-        }
-      }
-    }
-  }
-
-  .me {
-    max-height: 90%;
-    @media (max-width: 768px) {
-      width: 70%;
-    }
-    @media (min-width: 768px) and (max-width: 1280px) {
-      max-width: 40%;
     }
   }
 }
 
 .owls {
   position: absolute;
-  bottom: -13%;
+  bottom: -15%;
   left: 25%;
   transform: translateX(-50%);
   z-index: 1;
   width: 700px;
+
+  @include between(m, l) {
+    width: 500px;
+    bottom: -10%;
+    left: 25%;
+  }
+
+  @include between(l, xl) {
+    bottom: -12%;
+    left: 25%;
+  }
+
+  @include min-size(xl) {
+    bottom: -10%;
+    left: 20%;
+  }
 }
 </style>

@@ -64,7 +64,7 @@ const showLess = () => {
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-top: 60px;
+  margin: 60px 0;
 
   .content {
     max-width: 1200px;

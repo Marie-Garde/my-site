@@ -11,7 +11,7 @@ import maintenance from '@/assets/icon/maintenance.png';
 
 <template>
   <div class="container">
-    <img class="background-image" :src="codingImag" />
+    <img class="background-image" :src="codingImag" alt="code-developpement" />
     <div class="content">
       <Title title="Dèroulement de votre projet" id="steps" color="white" />
       <p class="subTitle">Il ne vous reste que 5 étapes pour lancer votre solution numérique.</p>
@@ -19,7 +19,7 @@ import maintenance from '@/assets/icon/maintenance.png';
         <div class="first-line">
           <div class="card">
             <div class="card-content">
-              <img class="icon" :src="meeting" />
+              <img class="icon" :src="meeting" alt="rendez-vous" />
               <h3 class="title">Èchange</h3>
               <p>
                 Vous allez m'expliquer vos besoins et attentes, et nous allons construire ensemble
@@ -29,7 +29,7 @@ import maintenance from '@/assets/icon/maintenance.png';
           </div>
           <div class="card">
             <div class="card-content">
-              <img class="icon" :src="design" />
+              <img class="icon" :src="design" alt="design" />
               <h3 class="title">Maquettes</h3>
               <p>
                 Une solution numérique se doit d'être différenciant et optimisé. Votre projet mérite
@@ -39,7 +39,7 @@ import maintenance from '@/assets/icon/maintenance.png';
           </div>
           <div class="card">
             <div class="card-content">
-              <img class="icon" :src="dev" />
+              <img class="icon" :src="dev" alt="développement" />
               <h3 class="title">Construction</h3>
               <p>Ce sera à mon tour de construire la solution parfaite pour vos besoins !</p>
             </div>
@@ -48,7 +48,7 @@ import maintenance from '@/assets/icon/maintenance.png';
         <div class="second-line">
           <div class="card">
             <div class="card-content">
-              <img class="icon" :src="deploy" />
+              <img class="icon" :src="deploy" alt="déploiement" />
               <h3 class="title">Livraison</h3>
               <p>
                 Déploiement de votre solution pour qu'elle soit accessible et que vous puissiez
@@ -59,7 +59,7 @@ import maintenance from '@/assets/icon/maintenance.png';
 
           <div class="card">
             <div class="card-content">
-              <img class="icon" :src="training" />
+              <img class="icon" :src="training" alt="formation" />
               <h3 class="title">Formation</h3>
               <p>
                 Je peux vous former sur des outils pour vous rendre plus indépendants dans la
@@ -70,7 +70,7 @@ import maintenance from '@/assets/icon/maintenance.png';
 
           <div class="card">
             <div class="card-content">
-              <img class="icon" :src="maintenance" />
+              <img class="icon" :src="maintenance" alt="maintenance" />
               <h3 class="title">Maintenance</h3>
               <p>
                 Un site web doit être maintenu pour éviter qu'il soit déprécié et les failles de

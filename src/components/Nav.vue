@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useRoute, useRouter } from 'vue-router';
 import logo from '../assets/illustration/logo.vue';
-import { ref, onMounted, onUnmounted } from 'vue';
+import { ref, onMounted, onUnmounted, computed } from 'vue';
 import { RoutesName } from '@/routes/routeName';
 import { isMobile } from '@/reactives/isMobile';
 import burgerMenu from '@/assets/illustration/burger-menu.vue';
@@ -13,6 +13,10 @@ const isScrolled = ref(false);
 const menuOpen = ref(false);
 const router = useRouter();
 const route = useRoute();
+
+const isHomePage = computed(() => {
+  return route.name === RoutesName.HOME;
+});
 
 function handleScroll() {
   isScrolled.value = window.scrollY > 50;
@@ -27,16 +31,20 @@ onUnmounted(() => {
 });
 
 function scrollToTop() {
-  if (route.name === RoutesName.LEGAL) {
+  if (route.name === RoutesName.LEGAL || route.name === RoutesName.CONTACT) {
     router.push({ name: RoutesName.HOME });
   } else {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 }
+
+function goToContact() {
+  router.push({ name: RoutesName.CONTACT });
+}
 </script>
 
 <template>
-  <nav :class="['navbar', { scrolled: isScrolled }]">
+  <nav :class="['navbar', { scrolled: isScrolled, notHomePage: !isHomePage }]">
     <div class="navbar-detail">
       <logo class="logo" @click="scrollToTop" />
 
@@ -44,12 +52,12 @@ function scrollToTop() {
         <burgerMenu />
       </div>
 
-      <ul v-if="!mobile && route.name != RoutesName.LEGAL">
+      <ul v-if="!mobile && route.name === RoutesName.HOME">
         <li><a href="#about" v-smooth-scroll>A propos</a></li>
         <li><a href="#services" v-smooth-scroll>Mes services</a></li>
         <li><a href="#steps" v-smooth-scroll>Les étapes de votre projet</a></li>
         <li><a href="#projects" v-smooth-scroll>Projets passés</a></li>
-        <li><a class="contact-me" href="#contact" v-smooth-scroll>Contactez-moi</a></li>
+        <li><button class="contact-me" @click="goToContact()">Contactez-moi</button></li>
       </ul>
 
       <div v-if="mobile && menuOpen" class="mobile-menu">
@@ -64,9 +72,7 @@ function scrollToTop() {
           </li>
           <li><a href="#projects" v-smooth-scroll @click="menuOpen = false">Projets passés</a></li>
           <li>
-            <a class="contact-me" href="#contact" v-smooth-scroll @click="menuOpen = false"
-              >Contactez-moi</a
-            >
+            <button class="contact-me" @click="goToContact()">Contactez-moi</button>
           </li>
         </ul>
       </div>
@@ -86,6 +92,7 @@ function scrollToTop() {
   transition: background-color 0.5s ease-in-out;
   background-color: transparent;
 
+  &.notHomePage,
   &.scrolled {
     background-color: #333;
   }
@@ -105,6 +112,7 @@ function scrollToTop() {
 
   ul {
     display: flex;
+    align-items: center;
     gap: 30px;
 
     li {
@@ -118,8 +126,10 @@ function scrollToTop() {
       .contact-me {
         background-color: $orange;
         color: $black;
-        padding: 8px 12px;
+        padding: 10px 14px;
         border-radius: 5px;
+        border: none;
+        cursor: pointer;
       }
     }
   }

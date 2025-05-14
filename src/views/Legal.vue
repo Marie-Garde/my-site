@@ -1,3 +1,29 @@
+<script setup lang="ts">
+import { useHead } from '@vueuse/head';
+
+useHead({
+  title: 'Marie Garde | Mentions légales',
+  meta: [
+    {
+      name: 'description',
+      content: "Faites décoller votre présence en ligne par la création d'un site personnalisé.",
+    },
+    {
+      name: 'keywords',
+      content:
+        'développement web, solution numérique, site web, Marie Garde, création de sites web',
+    },
+    { property: 'og:title', content: 'Marie Garde | Mentions légales' },
+    {
+      property: 'og:description',
+      content: "Faites décoller votre présence en ligne par la création d'un site personnalisé.",
+    },
+    { property: 'og:image', content: '@/public/logo.png' },
+    { property: 'og:url', content: 'https://marie-garde.com' },
+  ],
+});
+</script>
+
 <template>
   <div class="container">
     <div class="content">

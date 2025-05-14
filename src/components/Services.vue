@@ -5,6 +5,14 @@ import refonte from '@/assets/illustration/refonte.png';
 import responsive from '@/assets/illustration/responsive.png';
 import seo from '@/assets/illustration/seo.png';
 import Title from './Title.vue';
+import { useRouter } from 'vue-router';
+import { RoutesName } from '@/routes/routeName';
+
+const router = useRouter();
+
+function goToContact() {
+  router.push({ name: RoutesName.CONTACT });
+}
 </script>
 
 <template>
@@ -15,7 +23,7 @@ import Title from './Title.vue';
       <div class="cards-container">
         <div class="first-line">
           <div class="skill">
-            <img :src="integrationImage" />
+            <img :src="integrationImage" alt="integration" />
             <div class="skill-text">
               <h3>Intègration web</h3>
               <p>
@@ -25,7 +33,7 @@ import Title from './Title.vue';
             </div>
           </div>
           <div class="skill">
-            <img :src="refonte" />
+            <img :src="refonte" alt="refonte" />
             <div class="skill-text">
               <h3>Refonte de sites web</h3>
               <p>
@@ -37,7 +45,7 @@ import Title from './Title.vue';
         </div>
         <div class="second-line">
           <div class="skill">
-            <img :src="responsive" />
+            <img :src="responsive" alt="responsive" />
             <h3>Responsive</h3>
             <p>
               A l'aire du smartphone, il est crucial que votre site s'adapte à différentes tailles
@@ -45,7 +53,7 @@ import Title from './Title.vue';
             </p>
           </div>
           <div class="skill">
-            <img :src="seo" />
+            <img :src="seo" alt="référencement" />
             <h3>Rèfèrencement naturel</h3>
             <p>
               Je rends votre site visible et priorisé par Google et les autres moteurs de recherche
@@ -54,7 +62,7 @@ import Title from './Title.vue';
             </p>
           </div>
           <div class="skill">
-            <img :src="maintenance" />
+            <img :src="maintenance" alt="maintenance" />
             <h3>Maintenance</h3>
             <p>
               Un site doit être maintenu et régulièrement mis à jour pour des raisons de sécurités
@@ -65,7 +73,7 @@ import Title from './Title.vue';
       </div>
       <div class="contact-me">
         <h3>Vous avez un projet qui rentre dans mes compètences ? <span>Parlons en !</span></h3>
-        <a class="contact-me-button" href="#contact" v-smooth-scroll>Contactez-moi</a>
+        <button class="contact-me-button" @click="goToContact()">Contactez-moi</button>
       </div>
     </div>
   </div>
@@ -200,9 +208,10 @@ import Title from './Title.vue';
     background-color: $orange;
     color: $black;
     font-size: 24px;
-    padding: 12px 18px;
+    padding: 16px 22px;
     border-radius: 5px;
     text-decoration: none;
+    border: none;
 
     &:hover {
       color: $white-soft;
