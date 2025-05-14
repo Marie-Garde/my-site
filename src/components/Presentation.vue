@@ -2,7 +2,7 @@
 import { ref, onMounted, onBeforeUnmount } from 'vue';
 import backgroundImage from '@/assets/illustration/background-presentation.png';
 import backgroundMobileImage from '@/assets/illustration/background-presentation-mobile.png';
-import owls from '@/assets/illustration/chouettes-colorées-blanc.png';
+import owls from '@/assets/illustration/chouettes-colorées.png';
 import { isMobile } from '@/reactives/isMobile';
 
 const mobile = isMobile();
