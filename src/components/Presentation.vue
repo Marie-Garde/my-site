@@ -59,7 +59,7 @@ onBeforeUnmount(() => {
     </div>
   </div>
 
-  <img v-if="!mobile" class="owls" :src="owls" alt="chouettes" />
+  <img v-if="!mobile" class="owls" :src="owls" alt="chouettes-colorées" />
 </template>
 
 <style lang="scss" scoped>
