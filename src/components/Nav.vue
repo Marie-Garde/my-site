@@ -39,6 +39,7 @@ function scrollToTop() {
 }
 
 function goToContact() {
+  menuOpen.value = false;
   router.push({ name: RoutesName.CONTACT });
 }
 </script>
