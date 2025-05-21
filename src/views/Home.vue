@@ -8,7 +8,7 @@ import Steps from '@/components/Steps.vue';
 import { useHead } from '@vueuse/head';
 
 useHead({
-  title: 'Marie Garde | Accueil',
+  title: "L'envolée numérique | Accueil",
   meta: [
     {
       name: 'description',

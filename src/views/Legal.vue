@@ -2,7 +2,7 @@
 import { useHead } from '@vueuse/head';
 
 useHead({
-  title: 'Marie Garde | Mentions légales',
+  title: "L'envolée numérique | Mentions légales",
   meta: [
     {
       name: 'description',

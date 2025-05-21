@@ -10,7 +10,7 @@ import { isMobile } from '@/reactives/isMobile';
 import { useHead } from '@vueuse/head';
 
 useHead({
-  title: 'Marie Garde | Contactez-moi',
+  title: "L'envolée numérique | Contactez-moi",
   meta: [
     {
       name: 'description',
@@ -306,7 +306,7 @@ function sendEmail() {
             </div>
             <p v-show="error" class="error">{{ error }}</p>
 
-            <button type="submit" :disabled="disabled || isLoading" class="submit">
+            <button type="submit" :disabled="disabled || isLoading || error !== ''" class="submit">
               <span v-if="!isLoading">Envoyer</span>
               <span v-else class="loader"></span>
             </button>

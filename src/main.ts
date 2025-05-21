@@ -11,7 +11,7 @@ app.use(VueSmoothScroll);
 app.use(router);
 
 router.beforeEach((to, from, next) => {
-  const defaultTitle = 'Marie Garde';
+  const defaultTitle = "L'envolée numérique";
   document.title = (to.meta.title as string) || defaultTitle;
   next();
 });

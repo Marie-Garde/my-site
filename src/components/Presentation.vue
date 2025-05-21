@@ -4,8 +4,11 @@ import backgroundImage from '@/assets/illustration/background-presentation.png';
 import backgroundMobileImage from '@/assets/illustration/background-presentation-mobile.png';
 import owls from '@/assets/illustration/chouettes-couleur-blanc.png';
 import { isMobile } from '@/reactives/isMobile';
+import { useRouter } from 'vue-router';
+import { RoutesName } from '@/routes/routeName';
 
 const mobile = isMobile();
+const router = useRouter();
 
 const words = [
   'Marie !',
@@ -30,6 +33,10 @@ onMounted(() => {
 onBeforeUnmount(() => {
   clearInterval(intervalId);
 });
+
+function goToContact() {
+  router.push({ name: RoutesName.CONTACT });
+}
 </script>
 
 <template>
@@ -54,7 +61,7 @@ onBeforeUnmount(() => {
       </p>
       <div class="contact">
         <p>Vous avez un projet ?</p>
-        <a href="#contact" v-smooth-scroll>Contactez-moi !</a>
+        <a @click="goToContact()">Contactez-moi !</a>
       </div>
     </div>
   </div>
@@ -144,6 +151,8 @@ onBeforeUnmount(() => {
         font-size: 2rem;
         margin-left: 5px;
         color: $green;
+        text-decoration: underline 2px;
+        cursor: pointer;
 
         @include between(s, l) {
           font-size: 1.4rem;

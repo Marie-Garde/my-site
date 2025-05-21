@@ -105,7 +105,7 @@ function goToContact() {
   }
 
   .logo {
-    max-width: 80px;
+    max-width: 170px;
     fill: $white-soft;
     cursor: pointer;
   }
