@@ -15,7 +15,7 @@ defineProps({
 
 .title {
   text-align: center;
-  padding: 70px 0 20px 0;
+  padding: 100px 0 20px 0;
   margin: 0;
   &-white {
     color: $white-soft;

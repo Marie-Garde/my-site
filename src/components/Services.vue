@@ -86,7 +86,6 @@ function goToContact() {
   display: flex;
   justify-content: center;
   padding-bottom: 90px;
-  margin-top: 30px;
   width: 100%;
 
   .content {
