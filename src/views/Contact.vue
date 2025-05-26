@@ -227,7 +227,9 @@ function sendEmail() {
             N'hésitez pas à m'envoyer un message pour me présenter votre projet, je vous répondrai
             le plus rapidement possible pour caler un rendez-vous !
           </p>
-          <p>Mon mail : <a href="mailto:contact@marie-garde.com">contact@marie-garde.com</a></p>
+          <p>
+            Mon mail : <a href="mailto:contact@marie-garde.com">contact@lenvoleenumerique.com</a>
+          </p>
           <p v-if="!mobile" class="bubble">
             {{ bubbleText }}
           </p>

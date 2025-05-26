@@ -49,7 +49,7 @@ function goToContact() {
     <div class="navbar-detail">
       <logo class="logo" @click="scrollToTop" />
 
-      <div v-if="mobile" class="burger-menu" @click="menuOpen = !menuOpen">
+      <div v-if="mobile && isHomePage" class="burger-menu" @click="menuOpen = !menuOpen">
         <burgerMenu />
       </div>
 

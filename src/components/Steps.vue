@@ -129,7 +129,6 @@ import maintenance from '@/assets/icon/maintenance.png';
       @media (max-width: 768px) {
         flex-direction: column;
         align-items: center;
-        gap: 20px;
       }
 
       .first-line {
@@ -137,12 +136,24 @@ import maintenance from '@/assets/icon/maintenance.png';
         justify-content: space-between;
         width: 100%;
         margin-bottom: 20px;
+        @media (max-width: 768px) {
+          flex-direction: column;
+          align-items: center;
+          gap: 20px;
+          width: 90%;
+        }
       }
 
       .second-line {
         display: flex;
         justify-content: space-between;
         width: 100%;
+        @media (max-width: 768px) {
+          flex-direction: column;
+          align-items: center;
+          gap: 20px;
+          width: 90%;
+        }
       }
 
       .card {

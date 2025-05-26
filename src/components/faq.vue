@@ -118,6 +118,9 @@ import Title from './Title.vue';
     @media (max-width: 1024px) {
       min-width: 90%;
     }
+    @media (max-width: 768px) {
+      max-width: 90%;
+    }
 
     .text-top {
       margin-bottom: 0;

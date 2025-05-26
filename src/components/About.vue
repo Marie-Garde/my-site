@@ -129,6 +129,7 @@ import maltIcon from '@/assets/icon/malt.png';
       width: 90%;
       text-align: center;
       align-items: center;
+      margin-left: 0;
       h3 {
         margin: 5px 0;
       }

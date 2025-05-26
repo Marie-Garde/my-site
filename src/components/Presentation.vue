@@ -79,6 +79,9 @@ function goToContact() {
   height: 100vh;
   overflow: hidden;
   margin-bottom: 70px;
+  @include max-size(s) {
+    margin-bottom: 0;
+  }
 
   .background-image {
     position: absolute;
@@ -120,10 +123,10 @@ function goToContact() {
       @include max-size(s) {
         font-size: 2.5rem;
       }
+    }
 
-      .currentWord {
-        color: $orange;
-      }
+    .currentWord {
+      color: $orange;
     }
 
     p {
