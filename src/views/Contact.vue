@@ -173,6 +173,8 @@ function sendEmail() {
 
   isLoading.value = true;
 
+  console.log('PUBLIC KEY:', import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
+
   emailjs
     .send(
       import.meta.env.VITE_EMAILJS_SERVICE_ID,
@@ -192,6 +194,7 @@ function sendEmail() {
     )
     .then(
       (result) => {
+        console.log(result);
         messageSend.value = true;
 
         formValue.value = {
