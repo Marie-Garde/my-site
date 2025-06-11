@@ -223,7 +223,7 @@ function sendEmail() {
 <template>
   <div class="container">
     <div class="content">
-      <Title title="Parlez moi de vous" id="contact" color="white" />
+      <Title title="Parlez moi de vous test" id="contact" color="white" />
       <div class="form-content">
         <div class="informations">
           <p>
