@@ -145,11 +145,14 @@ import maltIcon from '@/assets/icon/malt.png';
       width: 60%;
     }
     @media (max-width: 768px) {
-      width: 90%;
+      width: 100%;
     }
     .buttons {
       display: flex;
       justify-content: space-between;
+      @media (max-width: 768px) {
+        gap: 10px;
+      }
       a {
         width: 100px;
         border-radius: 5px;

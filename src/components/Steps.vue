@@ -118,6 +118,7 @@ import maintenance from '@/assets/icon/maintenance.png';
       margin: 0;
       @media (max-width: 768px) {
         text-align: center;
+        width: 90%;
       }
     }
 

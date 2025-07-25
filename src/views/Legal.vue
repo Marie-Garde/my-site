@@ -32,20 +32,21 @@ useHead({
       <p>
         En vertu de l’article 6 de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans
         l’économie numérique, il est précisé aux utilisateurs du site internet
-        https://www.marie-garde.com l’identité des différents intervenants dans le cadre de sa
+        https://www.lenvoleenumerique.com l’identité des différents intervenants dans le cadre de sa
         réalisation et de son suivi:
       </p>
       <p>
-        <strong>Propriétaire du site :</strong>Marie Garde – Contact : contact@marie-garde.com –
-        Adresse : 101 chemin de la Salade Ponsan 31400 Toulouse.
+        <strong>Propriétaire du site :</strong>Marie Garde – Contact : contact@lenvoleenumerique.com
+        – Adresse : 101 chemin de la Salade Ponsan 31400 Toulouse.
       </p>
       <p>
         <strong>Identification de l’entreprise :</strong>Marie Garde EI – Numéro Siren : 934 339 706
         – Adresse postale : 101 chemin de la salade ponsan 31400 Toulouse
       </p>
-      <p><strong>Hébergeur :</strong>GitHub</p>
+      <p><strong>Hébergeur :</strong>Vercel</p>
       <p>
-        <strong>Délégué à la protection des données : </strong>Marie Garde – contact@marie-garde.com
+        <strong>Délégué à la protection des données : </strong>Marie Garde –
+        contact@lenvoleenumerique.com
       </p>
 
       <h2>2- Propriètè intellectuelle et contrefaçons</h2>
@@ -69,11 +70,12 @@ useHead({
       <p>
         <strong>Marie Garde</strong> ne pourra être tenue responsable des dommages, directs ou
         indirects, pouvant affecter l’équipement de l’utilisateur lors de l’accès au site
-        https://www.marie-garde.com. Elle décline toute responsabilité quant à l’usage qui pourrait
-        être fait des informations et contenus présents sur https://www.marie-garde.com.
-        <strong>Marie Garde</strong> met tout en œuvre pour assurer la sécurité du site
-        https://www.marie-garde.com. Toutefois, sa responsabilité ne saurait être engagée en cas
-        d’introduction involontaire de données indésirables sur le site.
+        https://www.lenvoleenumerique.com. Elle décline toute responsabilité quant à l’usage qui
+        pourrait être fait des informations et contenus présents sur
+        https://www.lenvoleenumerique.com. <strong>Marie Garde</strong> met tout en œuvre pour
+        assurer la sécurité du site https://www.lenvoleenumerique.com. Toutefois, sa responsabilité
+        ne saurait être engagée en cas d’introduction involontaire de données indésirables sur le
+        site.
       </p>
       <p>
         Des espaces interactifs, tels que la section contact, sont mis à disposition des
@@ -95,12 +97,12 @@ useHead({
 
       <h2>5 – Liens hypertextes et cookies</h2>
       <p>
-        Le site https://marie-garde.com contient des liens hypertextes vers d’autres sites et dégage
-        toute responsabilité à propos de ces liens externes ou des liens créés par d’autres sites
-        vers https://marie-garde.com
+        Le site https://lenvoleenumerique.com contient des liens hypertextes vers d’autres sites et
+        dégage toute responsabilité à propos de ces liens externes ou des liens créés par d’autres
+        sites vers https://lenvoleenumerique.com
       </p>
       <p>
-        La navigation sur le site https://marie-garde.com est susceptible de provoquer
+        La navigation sur le site https://lenvoleenumerique.com est susceptible de provoquer
         l’installation de cookie(s) sur l’ordinateur de l’utilisateur. Un « cookie » est un fichier
         de petite taille qui enregistre des informations relatives à la navigation d’un utilisateur
         sur un site. Les données ainsi obtenues permettent d’obtenir des mesures de fréquentation,
@@ -114,8 +116,8 @@ useHead({
 
       <h2>6 – Droit applicable et attribution de juridiction.</h2>
       <p>
-        Tout litige en relation avec l’utilisation du site https://marie-garde.com est soumis au
-        droit français. En dehors des cas où la loi ne le permet pas, il est fait attribution
+        Tout litige en relation avec l’utilisation du site https://lenvoleenumerique.com est soumis
+        au droit français. En dehors des cas où la loi ne le permet pas, il est fait attribution
         exclusive de juridiction aux tribunaux compétents de Toulouse.
       </p>
     </div>
